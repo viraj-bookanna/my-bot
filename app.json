@@ -5,14 +5,18 @@
     "telethon"
   ],
   "success_url": "https://t.me/ReverseLIvE",
-  "website": "https://github.com/XMYSTERlOUSX/mega-link-downloader-bot",
+  "website": "https://github.com/viraj-bookanna/my-bot",
   "logo": "https://telegra.ph/file/a972ad30870f123207fdb.png",
-  "repository": "https://github.com/XMYSTERlOUSX/mega-link-downloader-bot",
+  "repository": "https://github.com/viraj-bookanna/my-bot",
   "stack": "container",
   "env": {
-    "WEBHOOK": {
-      "description": "Setting this to ANYTHING will enable webhooks when in env mode! (Don't change anything in this field!)",
-      "value": "ANYTHING"
+    "API_ID": {
+      "description": "Telegram API ID",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Telegram API HASH",
+      "value": ""
     }
   },
   "addons": [

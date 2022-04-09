@@ -63,6 +63,8 @@ async def handle_command(event):
         now = datetime.datetime.now()
         time = now.strftime("%H:%M:%S")
         await event.edit("It's now `"+time+"` in Sri Lanka")
+    if command == 'id':
+        await event.edit("Current Chat Id: `{0}`".format(event.chat.id))
     if command == 'dl':
         msg = await event.get_reply_message()
         if msg.media is not None:
