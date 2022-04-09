@@ -3,6 +3,7 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
                     level=logging.WARNING)
 import asyncio
 from telethon import TelegramClient, events
+from telethon.sessions import  StringSession
 
 api_id = "8832090"
 api_hash = "fdf52a23e014c0d7f3d1c7768eaf552a"
