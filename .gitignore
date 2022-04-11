@@ -216,6 +216,8 @@ config.py
 *.session*
 *.DB
 
+# backup files
+*.bak
 
 credential.json
 client_secrets.json
