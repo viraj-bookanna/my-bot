@@ -10,12 +10,16 @@
   "repository": "https://github.com/viraj-bookanna/my-bot",
   "stack": "container",
   "env": {
-    "API_ID": {
+    "TG_API_ID": {
       "description": "Telegram API ID",
       "value": ""
     },
-    "API_HASH": {
+    "TG_API_HASH": {
       "description": "Telegram API HASH",
+      "value": ""
+    },
+    "TG_STR_SESSION": {
+      "description": "Telegram string session",
       "value": ""
     }
   },
