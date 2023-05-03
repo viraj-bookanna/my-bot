@@ -1,11 +1,8 @@
-import sys,os,util,asyncio
+import sys,os,time
 
-def main():
-    dataFile = sys.argv[1]
-    logFile = dataFile+".log"
-    real_command = await util.file_get_contents(dataFile)
-    command = "{0} 1> '{1}' 2>&1".format(real_command,logFile)
-    os.system(command)
-    os.remove(dataFile)
-    os.remove(logFile)
-asyncio.run(main())
+dataFile = sys.argv[1]
+logFile = dataFile+".log"
+os.system("python sheller_helper.py {0} 1> {1} 2>&1".format(dataFile, logFile))
+time.sleep(2)
+os.remove(dataFile)
+os.remove(logFile)

@@ -1,8 +1,5 @@
-import aiofiles
-import asyncio
-import os
+import os,subprocess,sys
 
-
-s = "ses lfdd".split()
-print(len(s)>1)
-print(len(s)>2)
+subprocess.Popen("python sheller.py a.txt".split(), shell=False, stdin=None, stdout=None, stderr=None, close_fds=True, creationflags=0x00000008,)
+for i in range(40):
+    print(i)

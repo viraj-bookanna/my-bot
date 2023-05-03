@@ -1,4 +1,4 @@
-import random,aiofiles,asyncio
+import random,aiofiles,asyncio,os
 
 async def uniqid(prefix=''):
     hexlist = "0123456789abcdef"
@@ -10,7 +10,7 @@ async def uniqid(prefix=''):
     return prefix+uid
 async def file_get_contents(fName):
     try:
-        async with aiofiles.open(fName, mode='r') file:
+        async with aiofiles.open(fName, mode='r') as file:
             fdata = await file.read()
         return fdata
     except:
@@ -24,7 +24,10 @@ async def file_put_contents(fName, fData):
         return False
 async def show_shell_output(event, logFile):
     await asyncio.sleep(2)
+    last = ''
     while os.path.isfile(logFile):
         output = await file_get_contents(logFile)
-        await event.edit(output)
+        last = output
+        if last != output and output != '':
+            await event.edit(output)
         await asyncio.sleep(2)
